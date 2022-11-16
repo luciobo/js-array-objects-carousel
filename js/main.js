@@ -1,4 +1,9 @@
 
+// recupero i bottini dall'html
+const btnAvanti = document.getElementById("slider-btn-avanti");
+const btnIndietro = document.getElementById("slider-btn-indietro");
+
+
 const images = [
     {
         image: 'img/01.webp',
@@ -22,3 +27,40 @@ const images = [
         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
     }
 ];
+
+
+images.forEach(function (images) {
+    console.log(images.image);
+})
+
+
+
+
+
+
+
+
+btnAvanti.addEventListener("click", function () {
+    console.log("bottone avanti cliccato")
+
+    // currentImgIndex++;
+
+    // if (currentImgIndex > immages.length - 1) {
+    //     currentImgIndex = 0;
+    // }
+
+    // sliderImgEl.src = immages[currentImgIndex];
+
+})
+
+btnIndietro.addEventListener("click", function () {
+    console.log("bottone indietro cliccato")
+
+    // currentImgIndex--;
+
+    // if (currentImgIndex < 0) {
+    //     currentImgIndex = 4;
+    // }
+
+    // sliderImgEl.src = immages[currentImgIndex];
+})

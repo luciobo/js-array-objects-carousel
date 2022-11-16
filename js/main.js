@@ -3,6 +3,9 @@
 const btnAvanti = document.getElementById("slider-btn-avanti");
 const btnIndietro = document.getElementById("slider-btn-indietro");
 
+// recupero il contenitore che conterra immagini e testi
+const sliederImmageEl = document.querySelector(".slider-container")
+console.log(sliederImmageEl);
 
 const images = [
     {
@@ -29,8 +32,12 @@ const images = [
 ];
 
 
-images.forEach(function (images) {
-    console.log(images.image);
+images.forEach(function (images, i) {
+    console.log(images.text);
+
+
+
+
 })
 
 
@@ -43,24 +50,12 @@ images.forEach(function (images) {
 btnAvanti.addEventListener("click", function () {
     console.log("bottone avanti cliccato")
 
-    // currentImgIndex++;
 
-    // if (currentImgIndex > immages.length - 1) {
-    //     currentImgIndex = 0;
-    // }
-
-    // sliderImgEl.src = immages[currentImgIndex];
 
 })
 
 btnIndietro.addEventListener("click", function () {
     console.log("bottone indietro cliccato")
 
-    // currentImgIndex--;
 
-    // if (currentImgIndex < 0) {
-    //     currentImgIndex = 4;
-    // }
-
-    // sliderImgEl.src = immages[currentImgIndex];
 })

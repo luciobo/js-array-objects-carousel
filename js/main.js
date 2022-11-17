@@ -33,29 +33,57 @@ const images = [
 
 
 images.forEach(function (images, i) {
+    console.log(images.image);
+    console.log(images.title);
     console.log(images.text);
 
-
-
-
+    // const pEl = document.createElement("p")
+    // pEl.innerHTML = images.text;
+    // sliederImmageEl.append(pEl);
 })
 
 
+const immages = [
+    "img/01.webp",
+    "img/02.webp",
+    "img/03.webp",
+    "img/04.webp",
+    "img/05.webp"
+
+];
+console.log(immages);
 
 
+let currentImgIndex = 0;
 
+const sliderImgEl = document.querySelector(".slider-img");
+
+sliderImgEl.src = immages[currentImgIndex];
 
 
 
 btnAvanti.addEventListener("click", function () {
     console.log("bottone avanti cliccato")
 
+    currentImgIndex++;
 
+    if (currentImgIndex > immages.length - 1) {
+        currentImgIndex = 0;
+    }
+
+    sliderImgEl.src = immages[currentImgIndex];
 
 })
+
 
 btnIndietro.addEventListener("click", function () {
     console.log("bottone indietro cliccato")
 
+    currentImgIndex--;
 
+    if (currentImgIndex < 0) {
+        currentImgIndex = 4;
+    }
+
+    sliderImgEl.src = immages[currentImgIndex];
 })
